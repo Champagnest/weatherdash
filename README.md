@@ -1,2 +1,1 @@
-# weatherdash
-a weather dashboard
+# Weatherly

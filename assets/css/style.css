@@ -1,0 +1,158 @@
+
+   
+body {
+    font-family: "Open Sans", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    color: white;
+    background-image: linear-gradient(to right, #6EB4FF, #000066);
+    height: 75px;
+    
+}
+
+h1 {
+    padding: 20px;
+    margin: 0;
+}
+
+main {
+    display: flex;
+}
+
+.search-col {
+    margin: .5%;
+    flex: 1 1 0;
+}
+
+form {
+    padding-bottom: 1%;
+    border-bottom: 1px solid black;
+}
+
+.search-col h2 {
+    margin: 0;
+    font-size: xx-large;
+}
+
+.search-button {
+    color: white;
+    background-color: #6EB4FF;
+}
+
+.search-button:hover {
+    background-color: #000066;
+
+    ;
+}
+
+input {
+    width: 100%;
+    margin: 2% 0 2% 0;
+    padding: 3% 0 3% 0;
+}
+
+button {
+    width: 100%;
+    border: none;
+    margin: 2% 0 2% 0;
+    padding: 2.5% 0 2.5% 0;
+    background-color: lightgray;
+    border-radius: 5px;
+    transition: background 250ms ease-in-out, 
+                transform 150ms ease;
+}
+
+button:hover {
+    background-color: #AAAAAA;
+
+}
+
+.city-selector {
+    padding-top: 2%;
+}
+
+.forecast-col {
+    margin: .5%;
+    flex: 4 4 0;
+}
+
+img { 
+    width: 40px;
+}
+
+.today {
+    border: 1px solid black;
+    padding: 1%;
+}
+
+.today h2 {
+    display: flex;
+    font-size: xx-large;
+}
+
+.today p {
+    font-size: larger;
+}
+
+.today p span {
+    padding: .5% 1.5% .5% 1%;
+    border-radius: 10px;
+}
+
+.uv-low {
+    background-color: green;
+    color: white;
+}
+
+.uv-mod {
+    background-color: yellow;
+    color: black;
+}
+
+.uv-high {
+    background-color: orange;
+    color: black;
+}
+
+.uv-vryHigh {
+    background-color: red;
+}
+
+.uv-extreme {
+    background-color: violet;
+    color: black;
+}
+
+.forecast-col h3 {
+    margin: 2% 0 1% 0;
+    vertical-align: middle;
+}
+
+#five-day {
+    display: flex;
+}
+
+article {
+    flex: 1 1 0;
+    background-color: #334257;
+    color: white;
+    margin: 0 2% 0 2%;
+    padding: .5%;
+}
+
+.day-one {
+    margin-left: 0;
+}
+
+.day-five {
+    margin-right: 0;
+}
+
+article h4 {
+    font-size: x-large;
+    margin: 0;
+}
