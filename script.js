@@ -1,4 +1,12 @@
+const moment = require("moment");
+
 // "https://api.openweathermap.org/data/2.5/weather?q=Sacramento&appid=" + apikey);
+var today = new Date();
+today = today.toLocaleDateString("en-US");
+var prevSearchObj = {};
+var searchIndex = 0;
+var now = moment();
+
 
 // A $( document ).ready() block.
 $( document ).ready(function() {
