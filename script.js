@@ -1,5 +1,4 @@
-const moment = require("moment");
-
+import moment from 'moment';
 // "https://api.openweathermap.org/data/2.5/weather?q=Sacramento&appid=" + apikey);
 var today = new Date();
 today = today.toLocaleDateString("en-US");
