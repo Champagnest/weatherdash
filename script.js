@@ -3,19 +3,28 @@
 // A $( document ).ready() block.
 $( document ).ready(function() {
     var city =""
-    $( "form" ).on("submit",function( event ) {
+    var cityResults = []
+    $( "form" ).on("submit",async function( event ) {
          event.preventDefault();
          city = $("input#city").val()
-        console.log(city)
+         cityResults = await getCity(city)
+        console.log(cityResults)
+        var cityToday = $(".today h2").text(cityResults.name)
+        var tempToday = $(".today .temp").text(cityResults.main.temp + "°F")
+        var windToday = $(".today .wind").text(cityResults.wind.speed + "MPH")
+        var humidityToday = $(".today .humidity").text(cityResults.main.humidity)
+        var descriptionToday = $(".today .description").append(`<img src="http://openweathermap.org/img/w/${cityResults.weather[0].icon}.png" alt="${cityResults.weather[0].description}" />`)
       });
-      
-fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=` + apikey.key)
-.then(function(response) {
+    });
 
-   return response.json()
-})
-.then(function(data) {
-    console.log(data);
-});
-});
 
+async function getCity(city) {
+    const data = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=` + apikey.key)
+   const json = await data.json()
+   return(json);
+};
+async function getforecast(city) {
+    const data = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&appid=` + apikey.key)
+   const json = await data.json()
+   return(json);
+};

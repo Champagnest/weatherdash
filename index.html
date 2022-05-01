@@ -8,13 +8,30 @@
     <title>Weatherly</title>
 </head>
 <body>
-    <div class="weather"></div>
+    <header>
+        <h1>Weather Dashboard</h1>
+    </header>
+    <main>
+    <div class="search-col">
+        <h2>Search for a City</h2>
     <form id="cityform"> 
-        <label for="city">Search for a City</label>
+        <label for="city"></label>
         <input type="text" id="city" name="city">
-        <input type="submit">
+        <input type="submit" class="search-button">
     </form>
+</div>
+    <div class="forecast-col">
+    <div class="today">
+        <h2></h2>
+        <p class="temp"></p> <p class="wind"></p> <p class="humidity"></p> <p class="description"
+        ></p>
+    </div>
+</div>
+<div class="five-day">
+
+</div>
 </div> 
+</main>
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="./apikey.js"></script>
     <script src="./script.js"></script>
